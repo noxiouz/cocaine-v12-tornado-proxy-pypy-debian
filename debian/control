@@ -1,0 +1,16 @@
+Source: cocaine-v12-tornado-proxy-tools-pypy
+Section: misc
+Priority: extra
+Maintainer: Anton Tyurin <noxiouz@s27h.xxx.yandex.net>
+Build-Depends: debhelper (>= 8.0.0),
+ pypy (>= 2.6),
+ python (>= 2.7),
+ python-virtualenv
+Standards-Version: 3.9.3
+Homepage: https://github.com/noxiouz/cocaine-v12-tornado-proxy-pypy-debian
+
+Package: cocaine-v12-tornado-proxy-tools-pypy
+Architecture: any
+Depends: pypy (>= 2.6)
+Description: cocaine-v12-tornado-proxy with pypy environment
+ Launch cocaine-tornado-proxy under pypy
