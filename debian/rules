@@ -17,9 +17,12 @@ override_dh_auto_build:
 override_dh_auto_install:
 	mkdir -p ./debian/cocaine-v12-tornado-proxy-tools-pypy/opt/cocaine-v12-tornado-proxy-tools-pypy/
 	cp -r ./pypy_env/* ./debian/cocaine-v12-tornado-proxy-tools-pypy/opt/cocaine-v12-tornado-proxy-tools-pypy/
+	mkdir -p ./debian/cocaine-v12-tornado-proxy-tools-pypy/usr/bin
+	cp -r ./cocaine-tool-pypy ./debian/cocaine-v12-tornado-proxy-tools-pypy/usr/bin
+	cp -r ./cocaine-tornado-proxy-pypy ./debian/cocaine-v12-tornado-proxy-tools-pypy/usr/bin
 
-overrid_dh_auto_clean:
-	rm -vrf ./pypy*
+override_dh_auto_clean:
+	rm -rf ./pypy*
 
 %:
 	dh $@ 
