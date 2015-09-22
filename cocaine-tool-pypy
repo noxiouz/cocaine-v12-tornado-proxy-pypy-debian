@@ -1,5 +1,5 @@
 #!/bin/bash
 
 source /opt/cocaine-v12-tornado-proxy-tools-pypy/bin/activate
-pypy /opt/cocaine-v12-tornado-proxy-tools-pypy/bin/cocaine-tool $@
+/opt/cocaine-v12-tornado-proxy-tools-pypy/bin/pypy /opt/cocaine-v12-tornado-proxy-tools-pypy/bin/cocaine-tool $@
 deactivate
