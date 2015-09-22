@@ -19,3 +19,6 @@ echo "Successfully build. Install cocaine-tools inside the virtualenv"
 source $ENV_NAME/bin/activate
 pip install cocaine-tools==$VERSION
 deactivate
+if [ ! -z "$ENV_NAME" ]; then
+   find ./$ENV_NAME | grep -E "(__pycache__|\.pyc$)" | xargs rm -rf
+fi

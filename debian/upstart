@@ -1,0 +1,20 @@
+description "cocaine-v12-tornado-proxy-pypy"
+
+start on filesystem
+stop on runlevel [016]
+limit nofile 65535 65535
+
+pre-start script
+    if [ -f /etc/default/$UPSTART_JOB ]; then
+        . /etc/default/$UPSTART_JOB
+    fi
+end script
+
+script
+    CONFIG_PATH="/etc/cocaine-tornado-proxy/cocaine-tornado-proxy.conf"
+    if [ -f /etc/default/$UPSTART_JOB ]; then
+        . /etc/default/$UPSTART_JOB
+    fi
+
+   exec sudo -u cocaine /usr/bin/cocaine-tornado-proxy-pypy --config=$CONFIG_PATH
+end script
