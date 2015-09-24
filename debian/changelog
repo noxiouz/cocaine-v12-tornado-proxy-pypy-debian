@@ -1,3 +1,9 @@
+cocaine-v12-tornado-proxy-tools-pypy (0.12.5.1-1) unstable; urgency=low
+
+  * 0.12.5.1
+
+ -- Anton Tyurin <noxiouz@yandex-team.ru>  Thu, 24 Sep 2015 21:56:22 +0300
+
 cocaine-v12-tornado-proxy-tools-pypy (0.12.5.0-1) unstable; urgency=low
 
   * Initial release
