@@ -9,7 +9,7 @@
 # Uncomment this to turn on verbose mode.
 export DH_VERBOSE=1
 
-TOOLS_VERSION=0.12.5.1
+TOOLS_VERSION=0.12.5.2
 
 override_dh_auto_build:
 	./build_env.sh $(TOOLS_VERSION)
