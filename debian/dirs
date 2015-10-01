@@ -1,1 +1,2 @@
-opt
+etc/cocaine-tornado-proxy-pypy
+var/log/cocaine-tornado-proxy-pypy

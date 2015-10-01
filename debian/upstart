@@ -5,7 +5,7 @@ stop on runlevel [016]
 limit nofile 65535 65535
 
 pre-start script
-    UNIXSOCKETDIR="/var/run/cocaine-v12-tornado-proxy/"
+    UNIXSOCKETDIR="/var/run/cocaine-v12-tornado-proxy-pypy/"
     if [ ! -d $UNIXSOCKETDIR ]; then
         mkdir -p $UNIXSOCKETDIR
         chown -R cocaine $UNIXSOCKETDIR
@@ -17,7 +17,7 @@ pre-start script
 end script
 
 script
-    CONFIG_PATH="/etc/cocaine-tornado-proxy/cocaine-tornado-proxy.conf"
+    CONFIG_PATH="/etc/cocaine-tornado-proxy-pypy/cocaine-tornado-proxy-pypy.conf"
     if [ -f /etc/default/$UPSTART_JOB ]; then
         . /etc/default/$UPSTART_JOB
     fi
